@@ -1,0 +1,155 @@
+#loading{
+    height: 100vh;
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+}
+#main{
+    border: 20px solid  white;
+    border-top: 20px solid  rgb(11, 150, 248);
+    /* border-left:20px solid rgb(11, 150, 248); */
+    border-radius: 50%;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top : calc(50% - 150px/2);
+    left: calc(50% - 150px/2);
+    animation: 3s linear 0s infinite spinner;
+}
+#left{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: rgb(11, 150, 248);
+}
+#right{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: -25px 125px ;
+    background-color: rgb(11, 150, 248);
+}
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(270deg);
+        border-top-color:red;
+    }
+    75%{
+        transform: rotate(540deg);
+        border-top-color: chocolate;
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+}
+body{
+    background-image: url("https://images.wallpaperscraft.com/image/single/boat_mountains_lake_135258_3840x2400.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: 100% 1200px;
+    
+}
+#search{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    background-color: rgba(135, 207, 235, 0.856);
+    padding: 10px 10%;
+    border-radius: 10px;
+}
+#city{
+    width: 95%;
+    background-color: rgba(128, 128, 128, 0.288);
+    outline: gray;
+    border: transparent;
+    border-radius: 5px 0px 0px 5px;
+}
+#search button{
+    min-width: 5%;
+}
+#demo{
+    display: grid;
+    width: 1220px;
+    height: 360px;
+    margin: auto;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 48%);
+    grid-gap: 4%;
+    margin-left: -2000px;
+    transition: 0.4s;
+}
+#weather{
+    width: 600px;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+}
+#weather1{
+    width: 65%;
+}
+#weather1 h2{
+    margin: 30px
+}
+#weather1 div{
+    margin: 80px;
+    font-size: 100px;
+}
+#weather2{
+    margin-top: 20px;
+}
+#weather2>div{
+    margin-top: 15px;
+    display: flex;
+}
+.min{
+    color: blue;
+    margin-right: 8px;
+}
+.max{
+    color: red;
+    margin-right: 8px;
+}
+ .far, .fas{
+    margin-right: 8px;
+}
+.wind, .cloud{
+    color: rgba(255, 255, 255, 0.562);
+}
+#map {
+    width: 600px;
+    background-color: rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+}
+#day7{
+    display: grid;
+    width: 1250px;
+    height: 200px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    margin: auto;
+    margin-top: -1000px;
+    transition: all 5s;
+
+}
+#day7 div{
+    background-color: rgba(0, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+#day7 div:nth-child(1){
+background-color: rgb(0, 255, 255); 
+}
+.Ltemp{
+   color: blue;
+}
+.Htemp{
+   color: red;
+}
